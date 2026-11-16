@@ -31,3 +31,4 @@ def test_navigation_to_contact(page):
     h.go_to_contact_us()
     assert '/contact_us' in h.get_url()
     expect(page).to_have_url('https://automationexercise.com/contact_us')
+

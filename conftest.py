@@ -1,5 +1,6 @@
 import pytest
 import allure
+import uuid
 from playwright.sync_api import sync_playwright
 
 
@@ -58,3 +59,20 @@ def pytest_runtest_makereport(item, call):
                 name="Screenshot",
                 attachment_type=allure.attachment_type.PNG
             )
+
+REGISTER_USER_FIRST_STEP = {
+    "name": "Olga",
+    "email": f"{uuid.uuid4().hex[:8]}@mail.com"
+}
+
+REGISTER_USER_SECOND_STEP = {
+    "password" : "Qwert1234",
+    "first_name" : "Anna",
+    "last_name" :"Test",
+    "address" : "test 112",
+    "country" : "Canada",
+    "state" : "Test", 
+    "city" : "Test",
+    "zipcode" : "12345678",
+    "phone_number" : "12345678911"
+}
