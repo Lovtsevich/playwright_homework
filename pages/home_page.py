@@ -1,7 +1,7 @@
 from pages.base_page import BasePage
 
 class HomePage(BasePage):
-    URL = "/"
+    URL = "https://automationexercise.com/"
 
     def __init__(self, page):
         super().__init__(page)
@@ -20,5 +20,4 @@ class HomePage(BasePage):
         self.login_link.click()
 
     def go_to_contact_us(self): 
-        self.contact_us_link.click()       
-
+        self.contact_us_link.click()
